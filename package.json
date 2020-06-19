@@ -1,5 +1,16 @@
 {
-  "name": "functions",
-  "description": "functions",
-  "dependencies": {}
+  "name": "send-mail",
+  "description": "send-mail",
+  "version": "0.1.0",
+  "author": "Ahsan Zaheer <ahsan024@gmail.com> (espressostack.com)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "nodemailer": "^4.6.4",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "mailgun-js": "^0.22.0"
+  },
+  "scripts": {
+    "dev": "netlify dev"
+  }
 }
