@@ -21,6 +21,9 @@ exports.handler = async (data, _context, callback) => {
   };
 
   try {
+    if (!json.email) {
+      throw "Error: email not given";
+    }
     const resp = await mg.messages().send(mailObject);
     console.log("response " + JSON.stringify({ resp }));
 
