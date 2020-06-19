@@ -22,6 +22,8 @@ exports.handler = async (data, _context, callback) => {
 
   try {
     const resp = await mg.messages().send(mailObject);
+    console.log("response " + JSON.stringify({ resp }));
+
     return {
       statusCode: 200,
       body: "Your message was sent successfully! We'll be in touch.",
