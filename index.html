@@ -2,22 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>testing netlify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
   </head>
   <body>
-    <pre><code id="data"></code></pre>
-    <script>
-      async function callNetlify(path) {
-        const fetchResult = await fetch(`/functions/${path}`),
-          body = await fetchResult.json();
-
-        document.getElementById("data").innerText += JSON.stringify(body);
-
-        return Promise.resolve(body);
-      }
-
-      let resp = callNetlify("send-mail");
-      console.log(JSON.stringify(resp));
-    </script>
+    <h1>Send mail lambda function</h1>
   </body>
 </html>
