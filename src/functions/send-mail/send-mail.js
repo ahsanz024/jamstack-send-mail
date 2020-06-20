@@ -8,7 +8,7 @@ exports.handler = async (data, _context, callback) => {
     domain: process.env.MAILGUN_DOMAIN,
   });
 
-  const json = JSON.stringify(data);
+  const json = JSON.parse(data);
 
   const mailObject = {
     from: `Contact Form <postmaster@${process.env.MAILGUN_DOMAIN}>`,
